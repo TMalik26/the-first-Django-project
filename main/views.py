@@ -9,4 +9,7 @@ def index(request):
     return render(request, 'main/index.html', context=context)
 
 def about(request):
-    return HttpResponse('About us')
+    context = {
+        'title' : 'HappyToes',
+    }
+    return render(request, 'main/about.html', context=context)
