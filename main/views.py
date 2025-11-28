@@ -7,7 +7,7 @@ def index(request):
 
     context = {
         'title' : 'HappyToes',
-        'content' : 'Головна',
+        'content' : 'Магазин носків - HappyToes',
         'categories': categories
     }
     return render(request, 'main/index.html', context=context)
