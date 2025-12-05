@@ -36,39 +36,39 @@
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Информация
+                                Інформація
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="#">Доставка и оплата</a></li>
-                                <li><a class="dropdown-item  text-white" href="#">Контактная информация</a></li>
+                                <li><a class="dropdown-item  text-white" href="#">Доставка й сплта</a></li>
+                                <li><a class="dropdown-item  text-white" href="#">Контактна інформація</a></li>
                                 <li><a class="dropdown-item  text-white" href="{% url "main:about" %}">Про нас</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  text-white" href="{% url "user:users_cart" %}">Корзина</a>
+                            <a class="nav-link  text-white" href="{% url "user:users_cart" %}">Кошик</a>
                         </li>
                         {% if not user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link  text-white" href="{% url "user:login" %}">Войти</a>
+                                <a class="nav-link  text-white" href="{% url "user:login" %}">Увійти</a>
                             </li>
                         {% else %}
                             <li class="nav-item dropdown ">
                                 <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    Мой профиль
+                                    Мій кабінет
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item  text-white" href="#">Корзина</a></li>
+                                    <li><a class="dropdown-item  text-white" href="#">Кошик</a></li>
                                     
-                                    <li><a class="dropdown-item  text-white" href="{% url "user:profile" %}">Личный кабинет</a>
+                                    <li><a class="dropdown-item  text-white" href="{% url "user:profile" %}">Особистий кабінет</a>
                                     </li>
                                     {% if user.is_admin or user.is_staff %}
-                                        <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Админ панель</a></li>
+                                        <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Адмін панель</a></li>
                                     {% endif %}
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item  text-white" href="{% url "user:logout" %}">Выйти</a></li>
+                                    <li><a class="dropdown-item  text-white" href="{% url "user:logout" %}">Вийти</a></li>
                                 </ul>
                             </li>
                         {% endif %}
